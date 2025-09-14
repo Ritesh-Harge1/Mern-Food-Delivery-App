@@ -3,12 +3,13 @@
 }
 
 body {
-  margin: 0;
+ margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Helvetica, Arial;
   background: url("https://t3.ftcdn.net/jpg/03/51/02/46/240_F_351024684_qRJBZa0XlvKs5bKDHVqlcbVF2ux4tDga.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  position: relative;
+  position: relative; 
+ 
 }
 
 /* Dark overlay to improve text visibility */
@@ -130,9 +131,9 @@ a:hover {
 .footer {
   padding: 2rem 1rem;
   border-top: 1px solid rgba(255,255,255,0.2);
-  margin-top: 3rem;
   text-align: center;
   color: #ddd;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 12px 12px 0 0;
+  margin-top: auto; /* makes footer stick to bottom */
 }

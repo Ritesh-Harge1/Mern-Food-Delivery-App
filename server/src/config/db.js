@@ -1,22 +1,17 @@
-import mongoose from 'mongoose';
-import 'dotenv/config';
+import mongoose from "mongoose";
+import "dotenv/config";
 
 export const connectDB = async () => {
-  const uri = process.env.MONGODB_URI;
-  if (!uri) {
-    console.error('❌ MONGODB_URI not defined in environment variables');
-    process.exit(1);
-  }
+  // Use .env variable or fallback to local MongoDB
+  const uri = process.env.DB_URI;
 
   try {
     await mongoose.connect(uri, {
-      dbName: 'mern_eats',
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+      dbName: "mern_eats", // database name
     });
-    console.log('✅ MongoDB connected');
+    console.log("✅ MongoDB connected:", uri);
   } catch (err) {
-    console.error('❌ MongoDB connection error:', err.message);
+    console.error("❌ MongoDB connection error:", err.message);
     process.exit(1);
   }
 };

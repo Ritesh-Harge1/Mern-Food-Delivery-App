@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API = "https://mern-food-delivery-app-14.onrender.com"
 
 export const api = axios.create({ baseURL: API })
 
